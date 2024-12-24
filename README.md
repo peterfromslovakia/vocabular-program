@@ -26,7 +26,7 @@ Obsahuje výslednú aplikáciu po zabalení. Hlavné časti:
 - Obsah tohto adresára:
   - **Vocabular.exe**: Spustiteľný súbor aplikácie.
   - Súbory ako chrome_*.pak, .dll a resources.pak: Tieto súbory sú potrebné na beh aplikácie a obsahujú komponenty ako Chromium, ktoré Electron využíva.
-  - **resources/**: Obsahuje hlavné súbory aplikácie vrátane balíka app.asar, kde sú zabalené vaše zdrojové kódy.
+  - **resources/**: Obsahuje hlavné súbory aplikácie vrátane balíka app.asar, kde sú zabalené zdrojové kódy.
 
 ### Adresár user_data/
 
@@ -37,4 +37,4 @@ Obsahuje **words.json**, ktorý aplikácia používa na uloženie a načítanie 
 - Koreňové súbory (napr. index.html, renderer.js, atď.) sú zdrojové kódy.
 - **node_modules/** obsahuje závislosti a nie je potrebné ho prenášať mimo vývoja.
 - **dist/** obsahuje konečnú aplikáciu pripravenú na inštaláciu a použitie.
-- **user_data/** je adresár na dynamické dáta (napr. váš slovník), ktorý je súčasťou inštalácie alebo runtime aplikácie.
+- **user_data/** je adresár na dynamické dáta (napr.slovník), ktorý je súčasťou inštalácie alebo runtime aplikácie.
