@@ -1,0 +1,47 @@
+{
+  "name": "vocabular",
+  "version": "1.0.0",
+  "description": "Aplikácia na precvičovanie slovíčok",
+  "author": "Peter Obala",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.vocabular.app",
+    "productName": "Vocabular",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "styles.css",
+      "images/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "./user_data/",
+        "to": "user_data/"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "images/english_flag_with_london.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^25.1.8"
+  }
+}

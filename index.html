@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Precvičovanie slovíčok</title>
+</head>
+<body>
+    <header>
+        <h1>Precvičovanie slovíčok</h1>
+    </header>
+
+    <div class="container">
+        <div class="test-section">
+            <h2>Poď sa otestovať 🙂</h2>
+            <p id="wordCount" style="font-size: 1.2em; color: #0056b3;"></p>
+            <p id="currentWord" class="test-word"></p>
+            <input type="text" id="answer" placeholder="Prelož do angličtiny">
+            <p id="result"></p>
+            <div class="buttons">
+                <button id="startTest">Start test</button>
+                <button id="stopTest">Stop test</button>
+                <button id="toggleWords">Zobraziť slovíčka</button>
+                <button id="exitProgram" style="background-color: red; color: white;">Ukončiť program</button>
+            </div>
+        </div>
+
+        <div id="statsBox"></div>
+
+        <div id="wordList" style="display: none;">
+            <h3>Slovník</h3>
+            <input type="text" id="searchWord" placeholder="Vyhľadaj slovíčko">
+            <ul id="wordListContent"></ul>
+            <button id="toggleWordsBottom">Skryť slovíčka</button>
+        </div>
+
+        <div class="form">
+            <h3>Pridať nové slovíčko</h3>
+            <div id="addMessageBox"></div>
+            <input type="text" id="newEnglish" placeholder="Anglické slovo">
+            <input type="text" id="newSlovak" placeholder="Slovenský preklad">
+            <button id="addWordButton">Pridať slovíčko</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <a href="mailto:peter.obala@gmail.com">peter.obala@gmail.com</a></p>
+        <img src="images/english_flag_with_london.png" alt="English Flag with London" class="footer-image">
+    </footer>
+    <script src="renderer.js"></script>
+</body>
+</html>

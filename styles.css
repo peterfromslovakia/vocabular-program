@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Použijeme moderné písmo Roboto */
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Zarovná všetky vnútorné elementy na stred */
+}
+
+input[type="text"] {
+    width: 100%; /* Šírka polí zostáva rovnaká */
+    max-width: 400px; /* Obmedzíme šírku na max 400px */
+    padding: 10px;
+    margin: 10px auto; /* Stredové zarovnanie s margin auto */
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Umožní vertikálne zarovnanie */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.delete-text {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #0056b3;
+    color: white;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-image {
+    display: block;
+    margin: 10px auto;
+    width: auto; /* Zachovanie šírky podľa pôvodného pomeru */
+    height: 50%; /* Nastavenie výšky na polovicu */
+    max-height: 200px; /* Maximálna výška, ak by bol obrázok príliš veľký */
+    object-fit: contain; /* Zachovanie celého obsahu obrázka bez orezu */
+    border-radius: 5px; /* Jemne zaoblené rohy */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný tieň pre vizuálny efekt */
+}
+
+
+.test-word {
+    font-size: 1.5em; /* Zvýraznené písmo */
+    color: #0056b3; /* Modrá farba */
+    font-weight: bold; /* Hrubé písmo */
+    margin: 10px auto; /* Priestor hore a dole, zarovnané na stred */
+    display: inline-block; /* Umožňuje stredové zarovnanie */
+}
+
+.test-section {
+    text-align: center; /* Zarovnanie všetkého na stred */
+}
+
+#result {
+    font-size: 1.5em; /* Rovnaká veľkosť písma ako testovacie slovo */
+    color: inherit; /* Nech sa farba dynamicky nastaví cez JS */
+    font-weight: bold; /* Hrubé písmo */
+    margin: 10px auto; /* Priestor hore a dole */
+    display: inline-block; /* Umožňuje zarovnanie na stred */
+    text-align: center; /* Pre stredové zarovnanie */
+}
+
+.form h3 {
+    margin-top: 20px;
+    text-align: center; /* Zarovnanie nadpisu na stred */
+}
+
+.form input {
+    width: 100%; /* Šírka vstupných polí */
+    max-width: 400px; /* Obmedzenie šírky na max 400px */
+    padding: 10px;
+    margin: 10px auto; /* Stredové zarovnanie */
+    display: block; /* Blokový element pre zarovnanie */
+}
+
+.form button {
+    margin-top: 10px;
+}
+
+/* Pridaný štýl pre rolovanie slovníka */
+#wordListContent {
+    max-height: 300px; /* Maximálna výška pre rolovanie */
+    overflow-y: auto; /* Povolenie vertikálneho rolovania */
+    border: 1px solid #ccc; /* Ohraničenie */
+    padding: 10px; /* Vnútorný priestor */
+    text-align: left; /* Zarovnanie textu na ľavú stranu */
+}
