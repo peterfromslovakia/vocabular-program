@@ -1,5 +1,48 @@
 # Vocabular
 
+Vocabular is a desktop application developed using the Electron framework for practicing English-Slovak vocabulary.
+
+## Project Structure Description for Vocabular
+
+### Root Directory of the Project
+
+- **index.html**: The main HTML file that loads the user interface. This file defines the basic structure of the application window.
+- **renderer.js**: The script executed in the browser context, handling DOM manipulation and user interface logic.
+- **styles.css**: The stylesheet file for defining the appearance of the user interface.
+- **package.json**: Defines project dependencies, scripts, and metadata. This file is essential for building and running the application.
+- **package-lock.json**: A detailed version of the dependencies generated during the installation of packages via npm.
+- **preload.js**: A bridge between the main process (main.js) and the renderer process (renderer.js). It is used for securely exposing APIs and functionalities.
+- **main.js**: The main process of the application, responsible for creating the window and managing system operations (such as file read and write).
+- **images/**: Contains icons and images used within the application or for app icons.
+
+### node_modules/ Directory
+
+This directory contains all dependencies (libraries and packages) needed for running the application. npm installs packages defined in package.json into this directory. No manual intervention is needed here.
+
+### dist/ Directory
+
+Contains the final packaged application. Key components:
+- **Vocabular-win32-x64/**: Holds all files required to run the application, including the executable file Vocabular.exe.
+- Contents of this directory:
+  - **Vocabular.exe**: The executable file of the application.
+  - Files like chrome_*.pak, .dll, and resources.pak: These are required for the application to run and include components like Chromium, used by Electron.
+  - **resources/**: Contains the main application files, including the app.asar bundle where source codes are packed.
+
+### user_data/ Directory
+
+Contains **words.json**, which the application uses to store and retrieve the vocabulary. This directory can be user-specific or application-specific.
+
+### Summary
+
+- Root files (e.g., index.html, renderer.js, etc.) represent the source code.
+- **node_modules/** contains dependencies and does not need to be transferred outside of the development environment.
+- **dist/** contains the final packaged application ready for installation and use.
+- **user_data/** is a directory for dynamic data (e.g., the vocabulary), included as part of the installation or runtime application.
+
+---
+
+# Vocabular
+
 Vocabular je desktopová aplikácia vyvinutá pomocou frameworku Electron na precvičovanie anglicko-slovenských slovíčok.
 
 ## Popis Štruktúry Projektu Vocabular
