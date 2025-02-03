@@ -1,87 +1,83 @@
-# English
+# Word Practice
 
-## Vocabular
+**Word Practice** is a desktop application built using the Electron framework. It is designed to help users learn and practice English-Slovak vocabulary effectively. Users can add custom words, test their knowledge using the built-in quiz, and manage their word list. The program is user-friendly and adaptable to individual learning needs.
 
-Vocabular is a desktop application developed using the Electron framework for practicing English-Slovak vocabulary.
+🔗 **For more information, visit the project website:**  
+[https://peterfromslovakia.github.io/vocabular-web/](https://peterfromslovakia.github.io/vocabular-web/)
 
-### Project Structure Description for Vocabular
+## Features
 
-#### Root Directory of the Project
+- **Vocabulary Quiz** – Users translate randomly selected words, and their performance statistics are displayed at the end of the test.
+- **Word List** – The full list of stored words is available for browsing in the `words.json` database.
+- **Add New Words** – Users can add their own words with English and Slovak translations.
+- **Search Functionality** – Quickly find words using the built-in search feature.
+- **Word Deletion** – Words can be removed from the list with a single click.
+- **Pronunciation Playback** – Users can listen to the correct pronunciation of English words.
 
-- **index.html**: The main HTML file that loads the user interface. This file defines the basic structure of the application window.
-- **renderer.js**: The script executed in the browser context, handling DOM manipulation and user interface logic.
-- **styles.css**: The stylesheet file for defining the appearance of the user interface.
-- **package.json**: Defines project dependencies, scripts, and metadata. This file is essential for building and running the application.
-- **package-lock.json**: A detailed version of the dependencies generated during the installation of packages via npm.
-- **preload.js**: A bridge between the main process (main.js) and the renderer process (renderer.js). It is used for securely exposing APIs and functionalities.
-- **main.js**: The main process of the application, responsible for creating the window and managing system operations (such as file read and write).
-- **images/**: Contains icons and images used within the application or for app icons.
-
-#### node_modules/ Directory
-
-This directory contains all dependencies (libraries and packages) needed for running the application. npm installs packages defined in package.json into this directory. No manual intervention is needed here.
-
-#### dist/ Directory
-
-Contains the final packaged application. Key components:
-- **Vocabular-win32-x64/**: Holds all files required to run the application, including the executable file Vocabular.exe.
-- Contents of this directory:
-  - **Vocabular.exe**: The executable file of the application.
-  - Files like chrome_*.pak, .dll, and resources.pak: These are required for the application to run and include components like Chromium, used by Electron.
-  - **resources/**: Contains the main application files, including the app.asar bundle where source codes are packed.
-
-#### user_data/ Directory
-
-Contains **words.json**, which the application uses to store and retrieve the vocabulary. This directory can be user-specific or application-specific.
-
-#### Summary
-
-- Root files (e.g., index.html, renderer.js, etc.) represent the source code.
-- **node_modules/** contains dependencies and does not need to be transferred outside of the development environment.
-- **dist/** contains the final packaged application ready for installation and use.
-- **user_data/** is a directory for dynamic data (e.g., the vocabulary), included as part of the installation or runtime application.
+### Large Vocabulary Support
+The application is optimized to handle a vast number of words, storing them in a local JSON file `words.json`. It allows users to manage thousands of words without compromising performance.
 
 ---
 
-# Slovensky
+## Project Structure
 
-## Vocabular
+### Root Directory
+- **index.html** – The main HTML file for the user interface.
+- **renderer.js** – Handles DOM manipulation and UI interactions.
+- **styles.css** – Defines the visual appearance of the application.
+- **package.json** – Specifies project dependencies and scripts.
+- **package-lock.json** – Locks dependency versions for consistency.
+- **preload.js** – Acts as a bridge between `main.js` and `renderer.js` for secure API exposure.
+- **main.js** – The main process that manages application windows and system interactions.
+- **images/** – Contains application icons and other assets.
 
-Vocabular je desktopová aplikácia vyvinutá pomocou frameworku Electron na precvičovanie anglicko-slovenských slovíčok.
+### Additional Directories
+- **node_modules/** – Contains installed dependencies managed via npm.
+- **dist/** – Stores the packaged application:
+  - **Vocabular-win32-x64/** – Includes the `.exe` file and supporting resources.
+  - **resources/** – Holds the main application files, including the `app.asar` bundle.
+- **user_data/** – Stores `words.json`, which holds the vocabulary data.
 
-### Popis Štruktúry Projektu Vocabular
+---
 
-#### Koreňový Adresár Projektu
+# Precvičovanie slovíčok
 
-- **index.html**: Hlavný HTML súbor, ktorý načítava používateľské rozhranie. Tento súbor definuje základnú štruktúru okna aplikácie.
-- **renderer.js**: Skript, ktorý sa vykonáva v kontexte prehliadača a manipuluje s DOM a používateľským rozhraním.
-- **styles.css**: Súbor so štýlmi pre vzhľad používateľského rozhrania.
-- **package.json**: Definuje závislosti, skripty a informácie o projekte. Tento súbor je potrebný na zostavenie a spustenie aplikácie.
-- **package-lock.json**: Detailná verzia závislostí vygenerovaná pri inštalácii balíčkov cez npm.
-- **preload.js**: Most medzi hlavným procesom aplikácie (main.js) a renderer procesom (renderer.js). Používa sa na bezpečné prenášanie API a funkcionality.
-- **main.js**: Hlavný proces aplikácie, ktorý vytvára okno a spravuje systémové operácie (napríklad čítanie a zápis do súborov).
-- **images/**: Obsahuje ikony a obrázky potrebné na zobrazenie v aplikácii alebo na ikonách.
+**Precvičovanie slovíčok** je desktopová aplikácia vyvinutá pomocou frameworku Electron. Aplikácia umožňuje efektívne učenie a precvičovanie anglicko-slovenských slovíčok. Používateľ môže pridávať vlastné slovíčka, testovať sa z existujúcej databázy a spravovať slovník. Program je navrhnutý tak, aby bol intuitívny a prispôsobený potrebám používateľa.
 
-#### Adresár node_modules/
+🔗 **Pre viac informácií navštívte webstránku:**  
+[https://peterfromslovakia.github.io/vocabular-web/](https://peterfromslovakia.github.io/vocabular-web/)
 
-Tento adresár obsahuje všetky závislosti (knižnice a balíčky) potrebné na beh aplikácie. Sem npm inštaluje balíčky definované v package.json. Tento adresár nie je potrebné manuálne manipulovať.
+## Funkcionality aplikácie
 
-#### Adresár dist/
+- **Testovanie slovíčok** – Používateľ prekladá náhodne vybrané slovíčka. Po ukončení testu sa zobrazí štatistika správnych odpovedí.
+- **Zobrazenie slovíčok** – Používateľ si môže prezerať kompletný zoznam slovíčok uložených v databáze `words.json`.
+- **Pridávanie slovíčok** – Možnosť pridávať nové slovíčka do databázy so slovenským a anglickým prekladom.
+- **Vyhľadávanie slovíčok** – Rýchle filtrovanie slovíčok podľa zadaného textu.
+- **Mazanie slovíčok** – Každé slovíčko v zozname je možné odstrániť jedným kliknutím.
+- **Prehrávanie výslovnosti** – Možnosť vypočuť si výslovnosť anglických slovíčok.
 
-Obsahuje výslednú aplikáciu po zabalení. Hlavné časti:
-- **Vocabular-win32-x64/**: Obsahuje všetky súbory potrebné na spustenie aplikácie vrátane spustiteľného súboru Vocabular.exe.
-- Obsah tohto adresára:
-  - **Vocabular.exe**: Spustiteľný súbor aplikácie.
-  - Súbory ako chrome_*.pak, .dll a resources.pak: Tieto súbory sú potrebné na beh aplikácie a obsahujú komponenty ako Chromium, ktoré Electron využíva.
-  - **resources/**: Obsahuje hlavné súbory aplikácie vrátane balíka app.asar, kde sú zabalené zdrojové kódy.
+### Podpora rozsiahlej databázy slovíčok
+Aplikácia je optimalizovaná na prácu s veľkým množstvom slovíčok, pričom používa lokálny JSON súbor `words.json`. Používateľ môže mať uložené stovky až tisíce slovíčok bez negatívneho dopadu na výkon programu.
 
-#### Adresár user_data/
+---
 
-Obsahuje **words.json**, ktorý aplikácia používa na uloženie a načítanie slovníka. Tento adresár môže byť špecifický pre používateľa alebo aplikáciu.
+## Štruktúra projektu
 
-#### Zhrnutie
+### Koreňový adresár projektu
+- **index.html** – Hlavný HTML súbor pre používateľské rozhranie.
+- **renderer.js** – Skript na manipuláciu s DOM a obsluhu užívateľského rozhrania.
+- **styles.css** – Štýly pre dizajn aplikácie.
+- **package.json** – Definuje závislosti a skripty projektu.
+- **package-lock.json** – Detailná verzia nainštalovaných závislostí.
+- **preload.js** – Most medzi hlavným procesom (`main.js`) a renderer procesom (`renderer.js`).
+- **main.js** – Hlavný proces aplikácie, ktorý spravuje systémové operácie.
+- **images/** – Obsahuje obrázky a ikony.
 
-- Koreňové súbory (napr. index.html, renderer.js, atď.) sú zdrojové kódy.
-- **node_modules/** obsahuje závislosti a nie je potrebné ho prenášať mimo vývoja.
-- **dist/** obsahuje konečnú aplikáciu pripravenú na inštaláciu a použitie.
-- **user_data/** je adresár na dynamické dáta (napr.slovník), ktorý je súčasťou inštalácie alebo runtime aplikácie.
+### Ďalšie adresáre
+- **node_modules/** – Obsahuje nainštalované závislosti (automaticky spravované cez npm).
+- **dist/** – Obsahuje výslednú zabalenú aplikáciu:
+  - **Vocabular-win32-x64/** – Obsahuje `.exe` súbor a ďalšie potrebné súbory.
+  - **resources/** – Hlavné súbory aplikácie vrátane `app.asar`.
+- **user_data/** – Obsahuje `words.json` pre ukladanie slovíčok.
+
+---
